@@ -1,0 +1,654 @@
+# baseURI: http://inova8.northwind/model/source/
+# imports: http://inova8.com/ir2rml/
+
+@prefix : <http://inova8.northwind/model/source/> .
+@prefix ir2rml: <http://inova8.com/ir2rml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix r2rml: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  rdf:type owl:Ontology ;
+  owl:imports ir2rml: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:categories
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/categories.categoryid> ;
+  ir2rml:column <http://inova8.northwind/model/source/categories.categoryname> ;
+  ir2rml:column <http://inova8.northwind/model/source/categories.description> ;
+  ir2rml:column <http://inova8.northwind/model/source/categories.picture> ;
+  rdfs:label "categories" ;
+  r2rml:tableName "categories" ;
+.
+<http://inova8.northwind/model/source/categories.categoryid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "categoryid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "categories.categoryid" ;
+.
+<http://inova8.northwind/model/source/categories.categoryname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "categoryname" ;
+  rdfs:label "categories.categoryname" ;
+.
+<http://inova8.northwind/model/source/categories.description>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "description" ;
+  rdfs:label "categories.description" ;
+.
+<http://inova8.northwind/model/source/categories.picture>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "picture" ;
+  rdfs:label "categories.picture" ;
+.
+:customercustomerdemo
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/customercustomerdemo.customerid> ;
+  ir2rml:column <http://inova8.northwind/model/source/customercustomerdemo.customertypeid> ;
+  rdfs:label "customercustomerdemo" ;
+  r2rml:tableName "customercustomerdemo" ;
+.
+<http://inova8.northwind/model/source/customercustomerdemo.customerid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "customerid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "customercustomerdemo.customerid" ;
+.
+<http://inova8.northwind/model/source/customercustomerdemo.customertypeid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "customertypeid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "customercustomerdemo.customertypeid" ;
+.
+:customerdemographics
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/customerdemographics.customerdesc> ;
+  ir2rml:column <http://inova8.northwind/model/source/customerdemographics.customertypeid> ;
+  rdfs:label "customerdemographics" ;
+  r2rml:tableName "customerdemographics" ;
+.
+<http://inova8.northwind/model/source/customerdemographics.customerdesc>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "customerdesc" ;
+  rdfs:label "customerdemographics.customerdesc" ;
+.
+<http://inova8.northwind/model/source/customerdemographics.customertypeid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "customertypeid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "customerdemographics.customertypeid" ;
+.
+:customers
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.address> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.city> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.companyname> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.contactname> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.contacttitle> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.country> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.customerid> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.fax> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.phone> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.postalcode> ;
+  ir2rml:column <http://inova8.northwind/model/source/customers.region> ;
+  rdfs:label "customers" ;
+  r2rml:tableName "customers" ;
+.
+<http://inova8.northwind/model/source/customers.address>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "address" ;
+  rdfs:label "customers.address" ;
+.
+<http://inova8.northwind/model/source/customers.city>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "city" ;
+  rdfs:label "customers.city" ;
+.
+<http://inova8.northwind/model/source/customers.companyname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "companyname" ;
+  rdfs:label "customers.companyname" ;
+.
+<http://inova8.northwind/model/source/customers.contactname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "contactname" ;
+  rdfs:label "customers.contactname" ;
+.
+<http://inova8.northwind/model/source/customers.contacttitle>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "contacttitle" ;
+  rdfs:label "customers.contacttitle" ;
+.
+<http://inova8.northwind/model/source/customers.country>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "country" ;
+  rdfs:label "customers.country" ;
+.
+<http://inova8.northwind/model/source/customers.customerid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "customerid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "customers.customerid" ;
+.
+<http://inova8.northwind/model/source/customers.fax>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "fax" ;
+  rdfs:label "customers.fax" ;
+.
+<http://inova8.northwind/model/source/customers.phone>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "phone" ;
+  rdfs:label "customers.phone" ;
+.
+<http://inova8.northwind/model/source/customers.postalcode>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "postalcode" ;
+  rdfs:label "customers.postalcode" ;
+.
+<http://inova8.northwind/model/source/customers.region>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "region" ;
+  rdfs:label "customers.region" ;
+.
+:employees
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.address> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.birthdate> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.city> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.country> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.employeeid> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.extension> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.firstname> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.hiredate> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.homephone> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.lastname> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.notes> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.photo> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.photopath> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.postalcode> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.region> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.reportsto> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.title> ;
+  ir2rml:column <http://inova8.northwind/model/source/employees.titleofcourtesy> ;
+  rdfs:label "employees" ;
+  r2rml:tableName "employees" ;
+.
+<http://inova8.northwind/model/source/employees.address>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "address" ;
+  rdfs:label "employees.address" ;
+.
+<http://inova8.northwind/model/source/employees.birthdate>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "birthdate" ;
+  rdfs:label "employees.birthdate" ;
+.
+<http://inova8.northwind/model/source/employees.city>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "city" ;
+  rdfs:label "employees.city" ;
+.
+<http://inova8.northwind/model/source/employees.country>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "country" ;
+  rdfs:label "employees.country" ;
+.
+<http://inova8.northwind/model/source/employees.employeeid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "employeeid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "employees.employeeid" ;
+.
+<http://inova8.northwind/model/source/employees.extension>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "extension" ;
+  rdfs:label "employees.extension" ;
+.
+<http://inova8.northwind/model/source/employees.firstname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "firstname" ;
+  rdfs:label "employees.firstname" ;
+.
+<http://inova8.northwind/model/source/employees.hiredate>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "hiredate" ;
+  rdfs:label "employees.hiredate" ;
+.
+<http://inova8.northwind/model/source/employees.homephone>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "homephone" ;
+  rdfs:label "employees.homephone" ;
+.
+<http://inova8.northwind/model/source/employees.lastname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "lastname" ;
+  rdfs:label "employees.lastname" ;
+.
+<http://inova8.northwind/model/source/employees.notes>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "notes" ;
+  rdfs:label "employees.notes" ;
+.
+<http://inova8.northwind/model/source/employees.photo>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "photo" ;
+  rdfs:label "employees.photo" ;
+.
+<http://inova8.northwind/model/source/employees.photopath>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "photopath" ;
+  rdfs:label "employees.photopath" ;
+.
+<http://inova8.northwind/model/source/employees.postalcode>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "postalcode" ;
+  rdfs:label "employees.postalcode" ;
+.
+<http://inova8.northwind/model/source/employees.region>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "region" ;
+  rdfs:label "employees.region" ;
+.
+<http://inova8.northwind/model/source/employees.reportsto>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "reportsto" ;
+  rdfs:label "employees.reportsto" ;
+.
+<http://inova8.northwind/model/source/employees.title>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "title" ;
+  rdfs:label "employees.title" ;
+.
+<http://inova8.northwind/model/source/employees.titleofcourtesy>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "titleofcourtesy" ;
+  rdfs:label "employees.titleofcourtesy" ;
+.
+:employeeterritories
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/employeeterritories.employeeid> ;
+  ir2rml:column <http://inova8.northwind/model/source/employeeterritories.territoryid> ;
+  rdfs:label "employeeterritories" ;
+  r2rml:tableName "employeeterritories" ;
+.
+<http://inova8.northwind/model/source/employeeterritories.employeeid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "employeeid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "employeeterritories.employeeid" ;
+.
+<http://inova8.northwind/model/source/employeeterritories.territoryid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "territoryid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "employeeterritories.territoryid" ;
+.
+:order_details
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/order_details.discount> ;
+  ir2rml:column <http://inova8.northwind/model/source/order_details.orderid> ;
+  ir2rml:column <http://inova8.northwind/model/source/order_details.productid> ;
+  ir2rml:column <http://inova8.northwind/model/source/order_details.quantity> ;
+  ir2rml:column <http://inova8.northwind/model/source/order_details.unitprice> ;
+  rdfs:label "order_details" ;
+  r2rml:tableName "order_details" ;
+.
+<http://inova8.northwind/model/source/order_details.discount>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "discount" ;
+  rdfs:label "order_details.discount" ;
+.
+<http://inova8.northwind/model/source/order_details.orderid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "orderid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "order_details.orderid" ;
+.
+<http://inova8.northwind/model/source/order_details.productid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "productid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "order_details.productid" ;
+.
+<http://inova8.northwind/model/source/order_details.quantity>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "quantity" ;
+  rdfs:label "order_details.quantity" ;
+.
+<http://inova8.northwind/model/source/order_details.unitprice>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "unitprice" ;
+  rdfs:label "order_details.unitprice" ;
+.
+:orders
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.customerid> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.employeeid> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.freight> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.orderdate> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.orderid> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.requireddate> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shipaddress> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shipcity> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shipcountry> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shipname> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shippeddate> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shippostalcode> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shipregion> ;
+  ir2rml:column <http://inova8.northwind/model/source/orders.shipvia> ;
+  rdfs:label "orders" ;
+  r2rml:tableName "orders" ;
+.
+<http://inova8.northwind/model/source/orders.customerid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "customerid" ;
+  rdfs:label "orders.customerid" ;
+.
+<http://inova8.northwind/model/source/orders.employeeid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "employeeid" ;
+  rdfs:label "orders.employeeid" ;
+.
+<http://inova8.northwind/model/source/orders.freight>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "freight" ;
+  rdfs:label "orders.freight" ;
+.
+<http://inova8.northwind/model/source/orders.orderdate>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "orderdate" ;
+  rdfs:label "orders.orderdate" ;
+.
+<http://inova8.northwind/model/source/orders.orderid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "orderid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "orders.orderid" ;
+.
+<http://inova8.northwind/model/source/orders.requireddate>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "requireddate" ;
+  rdfs:label "orders.requireddate" ;
+.
+<http://inova8.northwind/model/source/orders.shipaddress>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipaddress" ;
+  rdfs:label "orders.shipaddress" ;
+.
+<http://inova8.northwind/model/source/orders.shipcity>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipcity" ;
+  rdfs:label "orders.shipcity" ;
+.
+<http://inova8.northwind/model/source/orders.shipcountry>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipcountry" ;
+  rdfs:label "orders.shipcountry" ;
+.
+<http://inova8.northwind/model/source/orders.shipname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipname" ;
+  rdfs:label "orders.shipname" ;
+.
+<http://inova8.northwind/model/source/orders.shippeddate>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shippeddate" ;
+  rdfs:label "orders.shippeddate" ;
+.
+<http://inova8.northwind/model/source/orders.shippostalcode>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shippostalcode" ;
+  rdfs:label "orders.shippostalcode" ;
+.
+<http://inova8.northwind/model/source/orders.shipregion>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipregion" ;
+  rdfs:label "orders.shipregion" ;
+.
+<http://inova8.northwind/model/source/orders.shipvia>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipvia" ;
+  rdfs:label "orders.shipvia" ;
+.
+:products
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/products.categoryid> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.discontinued> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.productid> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.productname> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.quantityperunit> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.reorderlevel> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.supplierid> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.unitprice> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.unitsinstock> ;
+  ir2rml:column <http://inova8.northwind/model/source/products.unitsonorder> ;
+  rdfs:label "products" ;
+  r2rml:tableName "products" ;
+.
+<http://inova8.northwind/model/source/products.categoryid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "categoryid" ;
+  rdfs:label "products.categoryid" ;
+.
+<http://inova8.northwind/model/source/products.discontinued>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "discontinued" ;
+  rdfs:label "products.discontinued" ;
+.
+<http://inova8.northwind/model/source/products.productid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "productid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "products.productid" ;
+.
+<http://inova8.northwind/model/source/products.productname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "productname" ;
+  rdfs:label "products.productname" ;
+.
+<http://inova8.northwind/model/source/products.quantityperunit>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "quantityperunit" ;
+  rdfs:label "products.quantityperunit" ;
+.
+<http://inova8.northwind/model/source/products.reorderlevel>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "reorderlevel" ;
+  rdfs:label "products.reorderlevel" ;
+.
+<http://inova8.northwind/model/source/products.supplierid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "supplierid" ;
+  rdfs:label "products.supplierid" ;
+.
+<http://inova8.northwind/model/source/products.unitprice>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "unitprice" ;
+  rdfs:label "products.unitprice" ;
+.
+<http://inova8.northwind/model/source/products.unitsinstock>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "unitsinstock" ;
+  rdfs:label "products.unitsinstock" ;
+.
+<http://inova8.northwind/model/source/products.unitsonorder>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "unitsonorder" ;
+  rdfs:label "products.unitsonorder" ;
+.
+:region
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/region.regiondescription> ;
+  ir2rml:column <http://inova8.northwind/model/source/region.regionid> ;
+  rdfs:label "region" ;
+  r2rml:tableName "region" ;
+.
+<http://inova8.northwind/model/source/region.regiondescription>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "regiondescription" ;
+  rdfs:label "region.regiondescription" ;
+.
+<http://inova8.northwind/model/source/region.regionid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "regionid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "region.regionid" ;
+.
+:shippers
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/shippers.companyname> ;
+  ir2rml:column <http://inova8.northwind/model/source/shippers.phone> ;
+  ir2rml:column <http://inova8.northwind/model/source/shippers.shipperid> ;
+  rdfs:label "shippers" ;
+  r2rml:tableName "shippers" ;
+.
+<http://inova8.northwind/model/source/shippers.companyname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "companyname" ;
+  rdfs:label "shippers.companyname" ;
+.
+<http://inova8.northwind/model/source/shippers.phone>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "phone" ;
+  rdfs:label "shippers.phone" ;
+.
+<http://inova8.northwind/model/source/shippers.shipperid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "shipperid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "shippers.shipperid" ;
+.
+:suppliers
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.address> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.city> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.companyname> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.contactname> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.contacttitle> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.country> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.fax> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.homepage> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.phone> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.postalcode> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.region> ;
+  ir2rml:column <http://inova8.northwind/model/source/suppliers.supplierid> ;
+  rdfs:label "suppliers" ;
+  r2rml:tableName "suppliers" ;
+.
+<http://inova8.northwind/model/source/suppliers.address>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "address" ;
+  rdfs:label "suppliers.address" ;
+.
+<http://inova8.northwind/model/source/suppliers.city>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "city" ;
+  rdfs:label "suppliers.city" ;
+.
+<http://inova8.northwind/model/source/suppliers.companyname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "companyname" ;
+  rdfs:label "suppliers.companyname" ;
+.
+<http://inova8.northwind/model/source/suppliers.contactname>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "contactname" ;
+  rdfs:label "suppliers.contactname" ;
+.
+<http://inova8.northwind/model/source/suppliers.contacttitle>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "contacttitle" ;
+  rdfs:label "suppliers.contacttitle" ;
+.
+<http://inova8.northwind/model/source/suppliers.country>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "country" ;
+  rdfs:label "suppliers.country" ;
+.
+<http://inova8.northwind/model/source/suppliers.fax>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "fax" ;
+  rdfs:label "suppliers.fax" ;
+.
+<http://inova8.northwind/model/source/suppliers.homepage>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "homepage" ;
+  rdfs:label "suppliers.homepage" ;
+.
+<http://inova8.northwind/model/source/suppliers.phone>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "phone" ;
+  rdfs:label "suppliers.phone" ;
+.
+<http://inova8.northwind/model/source/suppliers.postalcode>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "postalcode" ;
+  rdfs:label "suppliers.postalcode" ;
+.
+<http://inova8.northwind/model/source/suppliers.region>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "region" ;
+  rdfs:label "suppliers.region" ;
+.
+<http://inova8.northwind/model/source/suppliers.supplierid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "supplierid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "suppliers.supplierid" ;
+.
+:territories
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/territories.regionid> ;
+  ir2rml:column <http://inova8.northwind/model/source/territories.territorydescription> ;
+  ir2rml:column <http://inova8.northwind/model/source/territories.territoryid> ;
+  rdfs:label "territories" ;
+  r2rml:tableName "territories" ;
+.
+<http://inova8.northwind/model/source/territories.regionid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "regionid" ;
+  rdfs:label "territories.regionid" ;
+.
+<http://inova8.northwind/model/source/territories.territorydescription>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "territorydescription" ;
+  rdfs:label "territories.territorydescription" ;
+.
+<http://inova8.northwind/model/source/territories.territoryid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "territoryid" ;
+  ir2rml:isPartOfPrimaryKey "true"^^xsd:boolean ;
+  rdfs:label "territories.territoryid" ;
+.
+:usstates
+  rdf:type r2rml:BaseTableOrView ;
+  ir2rml:column <http://inova8.northwind/model/source/usstates.stateabbr> ;
+  ir2rml:column <http://inova8.northwind/model/source/usstates.stateid> ;
+  ir2rml:column <http://inova8.northwind/model/source/usstates.statename> ;
+  ir2rml:column <http://inova8.northwind/model/source/usstates.stateregion> ;
+  rdfs:label "usstates" ;
+  r2rml:tableName "usstates" ;
+.
+<http://inova8.northwind/model/source/usstates.stateabbr>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "stateabbr" ;
+  rdfs:label "usstates.stateabbr" ;
+.
+<http://inova8.northwind/model/source/usstates.stateid>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "stateid" ;
+  rdfs:label "usstates.stateid" ;
+.
+<http://inova8.northwind/model/source/usstates.statename>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "statename" ;
+  rdfs:label "usstates.statename" ;
+.
+<http://inova8.northwind/model/source/usstates.stateregion>
+  rdf:type ir2rml:Column ;
+  ir2rml:columnName "stateregion" ;
+  rdfs:label "usstates.stateregion" ;
+.

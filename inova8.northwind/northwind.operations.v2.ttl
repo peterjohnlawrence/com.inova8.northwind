@@ -1,0 +1,153 @@
+# baseURI: http://northwind.com/operations/
+# imports: http://inova8.com/odata4sparql
+# imports: http://northwind.com/model/
+# imports: http://spinrdf.org/spin
+
+@prefix : <http://northwind.com/model/> .
+@prefix operations: <http://northwind.com/operations/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Operations
+  rdf:type owl:Thing ;
+  spin:query :OrderSummary ;
+  spin:query :Summary_of_Sales_by_Years ;
+  rdfs:label "Operations"^^xsd:string ;
+.
+:Order
+  rdf:predicate :order ;
+.
+:OrderSummary
+  rdf:type sp:Select ;
+  rdf:type owl:Class ;
+  sp:resultVariable [
+      rdf:type sp:Variable ;
+      sp:varName "order"^^xsd:string ;
+      rdf:predicate :orderSummary_order ;
+    ] ;
+  sp:resultVariable [
+      rdf:type sp:Variable ;
+      sp:varName "prod"^^xsd:string ;
+      rdf:predicate :orderSummary_product ;
+    ] ;
+  sp:resultVariable [
+      rdf:type sp:Variable ;
+      sp:varName "value"^^xsd:string ;
+      rdf:predicate :orderValue ;
+    ] ;
+  sp:text """select ?order ?prod (sum(?quantity * ( ?price * (1-?discount) )) as ?value)
+where{
+?orderdetail a <http://northwind.com/model/OrderDetail> .
+?orderdetail <http://northwind.com/model/order> ?order .
+?orderdetail <http://northwind.com/model/product> ?prod.
+?orderdetail <http://northwind.com/model/quantity> ?quantity .
+?orderdetail <http://northwind.com/model/unitPrice> ?price .
+?orderdetail <http://northwind.com/model/discount> ?discount 
+} group by ?order ?prod"""^^xsd:string ;
+  rdfs:label "Order summary"^^xsd:string ;
+.
+:Order_Summary_of_Sales_by_Years
+  rdf:type owl:ObjectProperty ;
+.
+:Summary_of_Sales_by_Years
+  rdf:type sp:Select ;
+  rdf:type owl:Class ;
+  sp:inputVariable [
+      rdf:type sp:Variable ;
+      sp:varName "wildcard"^^xsd:string ;
+      rdf:predicate :Summary_of_Sales_by_Years_wildcard ;
+    ] ;
+  sp:resultVariable [
+      rdf:type sp:Variable ;
+      sp:varName "orderID"^^xsd:string ;
+      rdf:predicate :Summary_of_Sales_by_Years_Order ;
+    ] ;
+  sp:resultVariable [
+      rdf:type sp:Variable ;
+      sp:varName "shippedDate"^^xsd:string ;
+      rdf:predicate :Summary_of_Sales_by_Years_shippedDate ;
+    ] ;
+  sp:resultVariable [
+      rdf:type sp:Variable ;
+      sp:varName "subTotal"^^xsd:string ;
+      rdf:predicate :Summary_of_Sales_by_Years_subTotal ;
+    ] ;
+  sp:text """select ?orderID ?shippedDate (sum(?quantity*?price*(1- ?discount )) as ?subTotal)
+where{
+?orderID  a <http://northwind.com/model/Order> .
+?orderID  <http://northwind.com/model/shippedDate> ?shippedDate.
+?orderdetail <http://northwind.com/model/order> ?orderID .
+?orderdetail <http://northwind.com/model/quantity> ?quantity .
+?orderdetail <http://northwind.com/model/unitPrice> ?price .
+?orderdetail <http://northwind.com/model/discount> ?discount  . 
+?orderdetail <http://northwind.com/model/product> ?prod .
+?prod rdfs:label ?prodlabel . FILTER(regex(?prodlabel, ?wildcard)) .  
+} 
+group by ?orderID  ?shippedDate"""^^xsd:string ;
+  rdfs:label "Summary of Sales by Years"^^xsd:string ;
+.
+:Summary_of_Sales_by_Years_Order
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :Summary_of_Sales_by_Years ;
+  rdfs:label "Summary of Sales by Years Order"^^xsd:string ;
+  rdfs:range :Order ;
+  owl:inverseOf :Order_Summary_of_Sales_by_Years ;
+.
+:Summary_of_Sales_by_Years_shippedDate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Summary_of_Sales_by_Years ;
+  rdfs:label "Summary of Sales by Years shipped date"^^xsd:string ;
+  rdfs:range xsd:dateTime ;
+.
+:Summary_of_Sales_by_Years_subTotal
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Summary_of_Sales_by_Years ;
+  rdfs:label "Summary of Sales by Years sub total"^^xsd:string ;
+  rdfs:range xsd:float ;
+.
+:Summary_of_Sales_by_Years_wildcard
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :Summary_of_Sales_by_Years ;
+  rdfs:range xsd:string ;
+.
+:orderSummary_order
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :OrderSummary ;
+  rdfs:label "part of Order"^^xsd:string ;
+  rdfs:range :Order ;
+.
+:orderSummary_product
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain :OrderSummary ;
+  rdfs:label "has Product"^^xsd:string ;
+  rdfs:range :Product ;
+.
+:orderValue
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain :OrderSummary ;
+  rdfs:label "unit price"^^xsd:string ;
+  rdfs:range xsd:float ;
+.
+:order_orderSummary
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "order order summary"^^xsd:string ;
+  owl:inverseOf :orderSummary_order ;
+.
+:product_orderSummary
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "product order summary"^^xsd:string ;
+  owl:inverseOf :orderSummary_product ;
+.
+operations:
+  rdf:type owl:Ontology ;
+  owl:imports <http://inova8.com/odata4sparql> ;
+  owl:imports : ;
+  owl:imports <http://spinrdf.org/spin> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+

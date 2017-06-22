@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:spin="http://spinrdf.org/spin#"
+    xmlns:sp="http://spinrdf.org/sp#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:odata4sparql="http://inova8.com/odata4sparql#"
+    xmlns="http://northwind.com/model/"
+    xmlns:operations="http://northwind.com/operations/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:spl="http://spinrdf.org/spl#"
+  xml:base="http://northwind.com/operations/">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/odata4sparql"/>
+    <owl:imports rdf:resource="http://northwind.com/model/"/>
+    <owl:imports rdf:resource="http://spinrdf.org/spin"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <owl:ObjectProperty rdf:about="http://northwind.com/model/orderSummary_order">
+    <rdfs:domain>
+      <odata4sparql:Operation rdf:about="http://northwind.com/model/OrderSummary">
+        <sp:resultVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >order</sp:varName>
+            <rdf:predicate rdf:resource="http://northwind.com/model/orderSummary_order"/>
+          </sp:Variable>
+        </sp:resultVariable>
+        <sp:resultVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >prod</sp:varName>
+            <rdf:predicate>
+              <owl:ObjectProperty rdf:about="http://northwind.com/model/orderSummary_product"/>
+            </rdf:predicate>
+          </sp:Variable>
+        </sp:resultVariable>
+        <sp:resultVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >value</sp:varName>
+            <rdf:predicate>
+              <owl:DatatypeProperty rdf:about="http://northwind.com/model/orderValue"/>
+            </rdf:predicate>
+          </sp:Variable>
+        </sp:resultVariable>
+        <sp:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >select ?order ?prod (sum(?quantity * ( ?price * (1-?discount) )) as ?value)&#xD;
+where{&#xD;
+?orderdetail a &lt;http://northwind.com/model/OrderDetail&gt; .&#xD;
+?orderdetail &lt;http://northwind.com/model/order&gt; ?order .&#xD;
+?orderdetail &lt;http://northwind.com/model/product&gt; ?prod.&#xD;
+?orderdetail &lt;http://northwind.com/model/quantity&gt; ?quantity .&#xD;
+?orderdetail &lt;http://northwind.com/model/unitPrice&gt; ?price .&#xD;
+?orderdetail &lt;http://northwind.com/model/discount&gt; ?discount &#xD;
+} group by ?order ?prod</sp:text>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Order summary</rdfs:label>
+      </odata4sparql:Operation>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >part of Order</rdfs:label>
+    <rdfs:range>
+      <rdf:Description rdf:about="http://northwind.com/model/Order">
+        <rdf:predicate rdf:resource="http://northwind.com/model/order"/>
+      </rdf:Description>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_Order">
+    <rdfs:domain>
+      <odata4sparql:Operation rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years">
+        <sp:inputVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >wildcard</sp:varName>
+            <rdf:predicate>
+              <owl:DatatypeProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_wildcard"/>
+            </rdf:predicate>
+          </sp:Variable>
+        </sp:inputVariable>
+        <sp:resultVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >orderID</sp:varName>
+            <rdf:predicate rdf:resource="http://northwind.com/model/Summary_of_Sales_by_Years_Order"/>
+          </sp:Variable>
+        </sp:resultVariable>
+        <sp:resultVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >shippedDate</sp:varName>
+            <rdf:predicate>
+              <owl:DatatypeProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_shippedDate"/>
+            </rdf:predicate>
+          </sp:Variable>
+        </sp:resultVariable>
+        <sp:resultVariable>
+          <sp:Variable>
+            <sp:varName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >subTotal</sp:varName>
+            <rdf:predicate>
+              <owl:DatatypeProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_subTotal"/>
+            </rdf:predicate>
+          </sp:Variable>
+        </sp:resultVariable>
+        <sp:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >select ?orderID ?shippedDate (sum(?quantity*?price*(1- ?discount )) as ?subTotal)&#xD;
+where{&#xD;
+?orderID  a &lt;http://northwind.com/model/Order&gt; .&#xD;
+?orderID  &lt;http://northwind.com/model/shippedDate&gt; ?shippedDate.&#xD;
+?orderdetail &lt;http://northwind.com/model/order&gt; ?orderID .&#xD;
+?orderdetail &lt;http://northwind.com/model/quantity&gt; ?quantity .&#xD;
+?orderdetail &lt;http://northwind.com/model/unitPrice&gt; ?price .&#xD;
+?orderdetail &lt;http://northwind.com/model/discount&gt; ?discount  . &#xD;
+?orderdetail &lt;http://northwind.com/model/product&gt; ?prod .&#xD;
+?prod rdfs:label ?prodlabel . FILTER(regex(?prodlabel, ?wildcard)) .  &#xD;
+} &#xD;
+group by ?orderID  ?shippedDate</sp:text>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Summary of Sales by Years</rdfs:label>
+      </odata4sparql:Operation>
+    </rdfs:domain>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Summary of Sales by Years Order</rdfs:label>
+    <rdfs:range rdf:resource="http://northwind.com/model/Order"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://northwind.com/model/Order_Summary_of_Sales_by_Years"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://northwind.com/model/order_orderSummary">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >order order summary</rdfs:label>
+    <owl:inverseOf rdf:resource="http://northwind.com/model/orderSummary_order"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://northwind.com/model/orderSummary_product">
+    <rdfs:domain rdf:resource="http://northwind.com/model/OrderSummary"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has Product</rdfs:label>
+    <rdfs:range rdf:resource="http://northwind.com/model/Product"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://northwind.com/model/product_orderSummary">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >product order summary</rdfs:label>
+    <owl:inverseOf rdf:resource="http://northwind.com/model/orderSummary_product"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://northwind.com/model/orderValue">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >order value</rdfs:label>
+    <rdfs:domain rdf:resource="http://northwind.com/model/OrderSummary"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_wildcard">
+    <rdfs:domain rdf:resource="http://northwind.com/model/Summary_of_Sales_by_Years"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_shippedDate">
+    <rdfs:domain rdf:resource="http://northwind.com/model/Summary_of_Sales_by_Years"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Summary of Sales by Years shipped date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://northwind.com/model/Summary_of_Sales_by_Years_subTotal">
+    <rdfs:domain rdf:resource="http://northwind.com/model/Summary_of_Sales_by_Years"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Summary of Sales by Years sub total</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <sp:Variable rdf:about="http://rdf.data.intra/envision/operations/long">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >long</rdfs:label>
+  </sp:Variable>
+  <owl:Thing rdf:about="http://northwind.com/model/Operations">
+    <spin:query rdf:resource="http://northwind.com/model/OrderSummary"/>
+    <spin:query rdf:resource="http://northwind.com/model/Summary_of_Sales_by_Years"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Operations</rdfs:label>
+  </owl:Thing>
+  <sp:Variable/>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
