@@ -181,7 +181,7 @@
                     <rdfs:label>Territory-01581</rdfs:label>
                     <model:territoryDescription>Westboro</model:territoryDescription>
                     <model:territoryRegion rdf:resource="http://northwind.com/Region-988c64336b8b535611fc1f617eca2cef"/>
-                    <rdf:type rdf:resource="#http://www.w3.org/2002/07/owlhttp://www.w3.org/2002/07/owl#NamedIndividualividual"/>
+                    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividualividual"/>
                   </model:Territory>
                 </model:territory>
               </owl:NamedIndividual>
@@ -198,7 +198,7 @@
                 <rdfs:label>Territory-06897</rdfs:label>
                 <model:territoryDescription>Wilton</model:territoryDescription>
                 <model:territoryRegion rdf:resource="http://northwind.com/Region-988c64336b8b535611fc1f617eca2cef"/>
-                <rdf:type rdf:resource="http://www.w3.org/2002/07/owlhttp://www.w3.org/2002/07/owl#NamedIndividual"/>
+                <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividualividual"/>
               </model:Territory>
             </model:territory>
           </owl:NamedIndividual>
