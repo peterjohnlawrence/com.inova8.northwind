@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://northwind.com/model/"
+    xmlns:j.1="http://"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:datacube="http://inova8.northwind/datacube/"
+    xmlns:j.2="http://count/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="http://inova8.northwind/datacube/">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/odata4sparql/datacube/"/>
+  </owl:Ontology>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-7">
+    <j.0:employeePostalCode>RG1 9SP</j.0:employeePostalCode>
+    <j.0:titleOfCourtesy>Mr.</j.0:titleOfCourtesy>
+    <j.0:employeeCity>London</j.0:employeeCity>
+    <j.0:title>Sales Representative</j.0:title>
+    <j.0:firstName>Robert</j.0:firstName>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.0:employeeCountry>UK</j.0:employeeCountry>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >72</j.2:managesOrder>
+    <j.0:extension>465</j.0:extension>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+    <j.0:homePhone>(71) 555-5598</j.0:homePhone>
+    <j.0:employeeAddress>Edgeham Hollow\nWinchester Way</j.0:employeeAddress>
+    <j.0:hireDate>2014-01-02</j.0:hireDate>
+    <rdfs:label>Employee-7</rdfs:label>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-8">
+    <j.0:employeeCity>Seattle</j.0:employeeCity>
+    <j.0:employeeCountry>USA</j.0:employeeCountry>
+    <rdfs:label>Employee-8</rdfs:label>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+    <j.0:homePhone>(206) 555-1189</j.0:homePhone>
+    <j.0:extension>2344</j.0:extension>
+    <j.0:employeeAddress>4726 - 11th Ave. N.E.</j.0:employeeAddress>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >104</j.2:managesOrder>
+    <j.0:hireDate>2014-03-05</j.0:hireDate>
+    <j.0:firstName>Laura</j.0:firstName>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.0:titleOfCourtesy>Ms.</j.0:titleOfCourtesy>
+    <j.0:title>Inside Sales Coordinator</j.0:title>
+    <j.0:employeePostalCode>98105</j.0:employeePostalCode>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-9">
+    <j.0:titleOfCourtesy>Ms.</j.0:titleOfCourtesy>
+    <j.0:title>Sales Representative</j.0:title>
+    <j.0:hireDate>2014-11-15</j.0:hireDate>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.0:employeeCity>London</j.0:employeeCity>
+    <j.0:employeePostalCode>WG2 7LT</j.0:employeePostalCode>
+    <j.0:extension>452</j.0:extension>
+    <rdfs:label>Employee-9</rdfs:label>
+    <j.0:employeeCountry>UK</j.0:employeeCountry>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >43</j.2:managesOrder>
+    <j.0:employeeAddress>7 Houndstooth Rd.</j.0:employeeAddress>
+    <j.0:firstName>Anne</j.0:firstName>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.0:homePhone>(71) 555-4444</j.0:homePhone>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-1">
+    <j.0:extension>5467</j.0:extension>
+    <j.0:employeeCity>Seattle</j.0:employeeCity>
+    <j.0:hireDate>2012-05-01</j.0:hireDate>
+    <j.0:employeeAddress>507 - 20th Ave. E.\nApt. 2A</j.0:employeeAddress>
+    <j.0:title>Sales Representative</j.0:title>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >123</j.2:managesOrder>
+    <j.0:firstName>Nancy</j.0:firstName>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.0:homePhone>(206) 555-9857</j.0:homePhone>
+    <j.0:employeeCountry>USA</j.0:employeeCountry>
+    <j.0:titleOfCourtesy>Ms.</j.0:titleOfCourtesy>
+    <j.0:employeePostalCode>98122</j.0:employeePostalCode>
+    <rdfs:label>Employee-1</rdfs:label>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-2">
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >5</j.2:managesEmployee>
+    <j.0:titleOfCourtesy>Dr.</j.0:titleOfCourtesy>
+    <j.0:title>Vice President, Sales</j.0:title>
+    <j.0:employeeAddress>908 W. Capital Way</j.0:employeeAddress>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+    <j.0:homePhone>(206) 555-9482</j.0:homePhone>
+    <j.0:employeeCountry>USA</j.0:employeeCountry>
+    <j.0:firstName>Andrew</j.0:firstName>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >96</j.2:managesOrder>
+    <j.0:extension>3457</j.0:extension>
+    <j.0:hireDate>2012-08-14</j.0:hireDate>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <rdfs:label>Employee-2</rdfs:label>
+    <j.0:employeeCity>Tacoma</j.0:employeeCity>
+    <j.0:employeePostalCode>98401</j.0:employeePostalCode>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-3">
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.0:title>Sales Representative</j.0:title>
+    <j.0:homePhone>(206) 555-3412</j.0:homePhone>
+    <j.0:employeeCountry>USA</j.0:employeeCountry>
+    <j.0:employeePostalCode>98033</j.0:employeePostalCode>
+    <j.0:hireDate>2012-04-01</j.0:hireDate>
+    <rdfs:label>Employee-3</rdfs:label>
+    <j.0:extension>3355</j.0:extension>
+    <j.0:titleOfCourtesy>Ms.</j.0:titleOfCourtesy>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >127</j.2:managesOrder>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.0:firstName>Janet</j.0:firstName>
+    <j.0:employeeAddress>722 Moss Bay Blvd.</j.0:employeeAddress>
+    <j.0:employeeCity>Kirkland</j.0:employeeCity>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-4">
+    <j.0:employeeCity>Redmond</j.0:employeeCity>
+    <j.0:employeeCountry>USA</j.0:employeeCountry>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.0:employeeAddress>4110 Old Redmond Rd.</j.0:employeeAddress>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+    <j.0:firstName>Margaret</j.0:firstName>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.0:title>Sales Representative</j.0:title>
+    <j.0:homePhone>(206) 555-8122</j.0:homePhone>
+    <j.0:employeePostalCode>98052</j.0:employeePostalCode>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >156</j.2:managesOrder>
+    <j.0:titleOfCourtesy>Mrs.</j.0:titleOfCourtesy>
+    <j.0:hireDate>2013-05-03</j.0:hireDate>
+    <rdfs:label>Employee-4</rdfs:label>
+    <j.0:extension>5176</j.0:extension>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-5">
+    <j.0:employeeCountry>UK</j.0:employeeCountry>
+    <j.0:homePhone>(71) 555-4848</j.0:homePhone>
+    <j.0:employeePostalCode>SW1 8JR</j.0:employeePostalCode>
+    <rdfs:label>Employee-5</rdfs:label>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >3</j.2:managesEmployee>
+    <j.0:employeeCity>London</j.0:employeeCity>
+    <j.0:extension>3453</j.0:extension>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >42</j.2:managesOrder>
+    <j.0:firstName>Steven</j.0:firstName>
+    <j.0:hireDate>2013-10-17</j.0:hireDate>
+    <j.0:titleOfCourtesy>Mr.</j.0:titleOfCourtesy>
+    <j.0:title>Sales Manager</j.0:title>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+    <j.0:employeeAddress>14 Garrett Hill</j.0:employeeAddress>
+  </j.0:Employee>
+  <j.0:Employee rdf:about="http://northwind.com/Employee-6">
+    <j.0:titleOfCourtesy>Mr.</j.0:titleOfCourtesy>
+    <j.0:homePhone>(71) 555-7773</j.0:homePhone>
+    <j.1:assertedType rdf:resource="http://northwind.com/model/Employee"/>
+    <rdfs:label>Employee-6</rdfs:label>
+    <j.1:targetEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+    >true</j.1:targetEntity>
+    <j.0:extension>428</j.0:extension>
+    <j.2:managesEmployee rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >0</j.2:managesEmployee>
+    <j.0:employeePostalCode>EC2 7JR</j.0:employeePostalCode>
+    <j.0:hireDate>2013-10-17</j.0:hireDate>
+    <j.0:employeeCity>London</j.0:employeeCity>
+    <j.0:title>Sales Representative</j.0:title>
+    <j.0:employeeAddress>Coventry House\nMiner Rd.</j.0:employeeAddress>
+    <j.2:managesOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >67</j.2:managesOrder>
+    <j.0:employeeCountry>UK</j.0:employeeCountry>
+    <j.0:firstName>Michael</j.0:firstName>
+  </j.0:Employee>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

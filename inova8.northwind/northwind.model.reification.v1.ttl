@@ -1,0 +1,24 @@
+# baseURI: http://inova8.northwind/model/reification
+# imports: http://northwind.com/model/
+# prefix: reification
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reification: <http://inova8.northwind/model/reification#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://inova8.northwind/model/reification>
+  rdf:type owl:Ontology ;
+  owl:imports <http://northwind.com/model/> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://northwind.com/model/OrderDetail>
+  rdfs:subClassOf rdf:Statement ;
+.
+<http://northwind.com/model/order>
+  rdfs:subPropertyOf rdf:subject ;
+.
+<http://northwind.com/model/product>
+  rdfs:subPropertyOf rdf:object ;
+.
